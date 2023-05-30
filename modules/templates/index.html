@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intent Classification</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      #input-form {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      #result {
+        margin-top: 50px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Intent Classification</h1>
+    <div id="input-form">
+      <form onsubmit="submitForm(event)">
+        <label for="utterance">Enter Utterance:</label><br />
+        <input type="text" id="utterance" name="utterance" required /><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <div id="result"></div>
+
+    <script>
+      async function submitForm(event) {
+        event.preventDefault();
+        const utterance = document.getElementById("utterance").value;
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = "Loading...";
+
+        try {
+          const response = await fetch("/intent_detection", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ utterance }),
+          });
+
+          if (!response.ok) {
+            throw new Error(response.statusText);
+          }
+
+          const data = await response.json();
+          resultDiv.innerHTML = `<strong>Intent:</strong> ${data.intent}`;
+        } catch (error) {
+          resultDiv.innerHTML = "Error occurred while making the request.";
+          console.error(error);
+        }
+      }
+    </script>
+  </body>
+</html>
