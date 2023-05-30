@@ -8,8 +8,6 @@ https://colab.research.google.com/drive/1MYdmEn2MtD_pFrhbANLyD9uJ35521RDR?usp=sh
 ## How to use?
 The directory tree of this project is as below:
 ```
-$CoBiC
-.
 ├── llm-as-service
 |    ├── modules
 |               ├── roberta-finetuned
