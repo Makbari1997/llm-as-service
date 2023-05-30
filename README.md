@@ -10,20 +10,21 @@ The directory tree of this project is as below:
 ```
 ├── llm-as-service
 |    ├── modules
-|               ├── roberta-finetuned
-|               |                   ├── config.json
-|               |                   ├── merges.txt
-|               |                   ├── special_tokens_map.json    
-|               |                   ├── tokenizer_config.json
-|               |                   ├── tokenizer.json
-|               |                   └── vocab.json
-|               ├── roberta-finetuned
-|               |                   └── index.html
-|               ├── app.py
-|               ├── classifier.py
-|               ├── Dockerfile
-|               ├── requirements.txt
-|               ├── test_app.py
+|    |          ├── roberta-finetuned
+|    |          |                   ├── config.json
+|    |          |                   ├── merges.txt
+|    |          |                   ├── special_tokens_map.json    
+|    |          |                   ├── tokenizer_config.json
+|    |          |                   ├── tokenizer.json
+|    |          |                   └── vocab.json
+|    |          ├── templates
+|    |          |           └── index.html
+|    |          ├── app.py
+|    |          ├── classifier.py
+|    |          ├── Dockerfile
+|    |          ├── requirements.txt
+|    |          └── test_app.py
+|    └── docker-compose.yml
 ```
 First, clone the repository. Then change your directory to 'llm-as-service'. Run the following command:
 ```
