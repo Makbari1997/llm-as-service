@@ -83,4 +83,4 @@ utterance:
 - I want to see Shattered Image
 ```
 
-* Note: The finetuned object of RoBERTa was not possible to be upploaded because of file volume limitations on github. The finetuned version will be downloaded automatically from (https://drive.google.com/file/d/1-lFF3vM-ZiUlhLl6ccc-6ZmcgnO3OdJR/view?usp=share_link) after running `docker-compose up`.
+* Note: The finetuned object of RoBERTa was not possible to be uploaded because of file volume limitations on github. The finetuned version will be downloaded automatically from (https://drive.google.com/file/d/1-lFF3vM-ZiUlhLl6ccc-6ZmcgnO3OdJR/view?usp=share_link) after running `docker-compose up`.
