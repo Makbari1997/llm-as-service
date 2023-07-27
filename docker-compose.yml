@@ -4,4 +4,4 @@ services:
   llm-as-service:
     build: ./modules
     ports:
-      - 8000:8000
+      - 8080:8000
